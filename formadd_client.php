@@ -47,32 +47,18 @@
                             <input type="date" name="birthday" id="birthday" class="text">
                         </div>
                     </div>
-                    <div class="row text-box">
+                    <div class="row">
                         <div class="col-sm-4">
-                        <div class="row">
-                        <div class="col">
-                            <label for="email">Email</label><br>
+                            <label for="email">E-mail</label><br>
                             <input type="email" name="email" id="email" class="text" placeholder="Email">
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="col">
-                            <label for="email">Tel</label><br>
-                            <input type="email" name="email" id="email" class="text" placeholder="Telephone number">
-                        </div>
-                        </div>
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4">
-                        <div class="row">
-                        <div class="col">
-                            <label for="address">Address</label><br>
-                            <textarea rows="4" name="address" id="address" class="text">
-                            </textarea>
-                        </div>
-                        </div>
+                            <label for="birthday">Address</label><br>
+                            <input type="date" name="birthday" id="birthday" class="text">
                         </div>
                     </div>
+                   
                     
                             <div class="row text-center mt-3">
                                 <di class="col-sm-6">

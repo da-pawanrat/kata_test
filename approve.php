@@ -132,44 +132,47 @@
             </div>
 
         <!-- Client data details -->
+        <form action="">
         <div class="col-5" style="border-radius:25px; background-color: Gainsboro; margin: 20px 0px 0px 375px ; ">
             
-                <div style="padding:12px">
-                    <p>Name : Atimay Pengchai</p>
-                    <p>Staff ID: 103</p>
-                    <p>Job Title: Staff</p>
-                    <p>Type of emplyee: Full-time</p>
-                    <p>Tel : 027-7111111</p>
-
-                </div>
-                <hr width="100%" >
-                <div style="padding:12px">
-                    <p>Leave Type: Sick Leave</p>
-                    <p>Begin Date : 11/06/21</p>
-                    <p>Due Date: 12/06/21</p>
-                    <p>Remrk:</p>
-
-                </div>
-                
-    
-        </div>
-    </div>
-        <div class="boxing" style="padding:25px;margin-left:550px">
-            <div class="box-1" style="float:left;">
-                <a href="">
-                <button class="btn btn-click"  style="background-color:LightGreen" >APPROVE</button>
-                </a>
+            <div style="padding:12px">
+                <p>Name : Atimay Pengchai</p>
+                <p>Staff ID: 103</p>
+                <p>Job Title: Staff</p>
+                <p>Type of emplyee: Full-time</p>
+                <p>Tel : 027-7111111</p>
 
             </div>
-            <div class="box-2" style="float:left;margin-left:15px">
-                <a href="">
-                <button class="btn btn-click"  style="background-color:IndianRed" >DISAPPROVE</button>
-                </a>
+            <hr width="100%" >
+            <div style="padding:12px">
+                <p>Leave Type: Sick Leave</p>
+                <p>Begin Date : 11/06/21</p>
+                <p>Due Date: 12/06/21</p>
+                <p>Remrk:</p>
 
             </div>
             
-        </div>
 
+    </div>
+</div>
+    <div class="boxing" style="padding:25px;margin-left:550px">
+        <div class="box-1" style="float:left;">
+            <a href="">
+            <button type="submit"class="btn btn-click"  style="background-color:LightGreen" >APPROVE</button>
+            </a>
+
+        </div>
+        <div class="box-2" style="float:left;margin-left:15px">
+            <a href="">
+            <button type="submit" class="btn btn-click"  style="background-color:IndianRed" >DISAPPROVE</button>
+            </a>
+
+        </div>
+        
+    </div>
+
+        </form>
+        
         
         
 
