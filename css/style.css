@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #8D6E63;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidebar.active{
+    width: 240px;
+}
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+.logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+}
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 6px;
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0 5px;
+    list-style: none;
+    list-style: none;
+    line-height: 50px;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 122px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #BDBDBD;
+    padding-left: 50px;
+    font-size: 18px;
+}
+.sidebar ul li .bx-search-alt{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    top: 15px;
+    padding-left: 15px;
+    transition: all 0.5s ease;
+}
+.sidebar ul li .bx-search-alt:hover{
+    background: #fff;
+    color: #8D6E63;
+}
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+.sidebar ul li a:hover{
+    color: #8D6E63;
+    background: #fff;
+}
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+}
+.nav_list{
+    padding-left: 0;
+}
+.sidebar .profile_content{
+    position: absolute;
+    color: #424242;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.5s ease;
+}
+.sidebar.active .profile_content .profile{
+    background: #A1887F;
+}
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.profile .profile_details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.profile .profile_details .name_job{
+    margin-left: 10px;
+}
+.profile .profile_details .name{
+    font-size: 13px;
+    font-weight: 400;
+}
+.profile #logout{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.5s ease;
+    background: #A1887F;
+}
+.home_content{
+    position: relative;
+    height: auto;
+    width: cals(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 12px;
+}
+.sidebar.active .profile #logout{
+    left: 88%;
+}
+.sidebar.active .profile #logout{
+    background: none;
+}
+
+.sidebar.active ~ .home_content{
+    width: cals(100% - 240px);
+    left: 240px;
+}
+.home_content .container{
+    margin: 30px;
+    padding: 40px;
+    text-align: center;
+}
+.home_content .container .dashboards .title_dash{
+    font-size: 22px;
+    font-weight: 400;
+    color: #424242;
+}
+.container .dashboards .body_dash .row{
+    margin: 20px;
+    padding: 20px;
+}
+.container .dashboards .body_dash .row p{
+    padding: 5px 0 10px 0;
+    text-align: left;
+}
+.container .dashboards .body_dash .col-6{
+    max-width: 45%;
+}
+.dashboards .body_dash .row #room_status_available{
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #81C784;
+    color: #fff;
+}
+.dashboards .body_dash .row #room_status_not_available{
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #FFE082;
+    color: #fff;
+}
+.home_content #title_name{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 6px;
+    padding-left: 6px;
+    color: grey;
+    font-weight: 500;
+}
+.home_content #name_page{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: -12px;
+    padding-left: 6px;
+    color: #8d8c8c;
+    font-weight: 400;
+}
+.home_content .row .col-sm-4 .input-group{
+    margin-top: 20px;
+    padding-right: 130px;
+    text-align: center;
+
+}
+.cli-table .title-cli-table{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.cli-table .title-cli-table .title-name #title-eng{
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+}
+.cli-table .title-cli-table .title-name #title-thai{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -20px;
+}
+.cli-table .title-cli-table .dropdown .btn-dropdown{
+    background-color: #d3d2d2;
+    margin: 6px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.cli-table .title-cli-table .col-2 .btn-click{
+    background-color: #6691ca;
+    margin: 6px;
+    padding: 10px;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+.cli-table .client-table{
+    margin: 0px 95px 12px 12px;
+    padding: 10px;
+    
+}
+.table .client-table{
+    border-radius: 12px;
+    background-color: rgb(224, 224, 224);
+}
+.cli-table .client-table .header-table{
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 20px;
+    color: grey;
+}
+.client-table .row .header-btn .btn-add{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #81C784;
+    border-radius: 10px;
+}
+.client-table .row .header-btn .btn-edit{
+    margin-left: -80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FFE082;
+    border-radius: 10px;
+}
+.client-table .table{
+    border-style: solid;
+    margin: 6px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.home_content .login{
+    background-image:url("../images/background.jpg");
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;   
+}
+.home_content .login .form-group{
+    margin-top: 50px;
+}
+.home_content .login .btn-login{
+    margin-top: 550px;
+    background-color: #fff;
+    color: grey;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.cli-table .table-hover thead tr th{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.client-table .table-hover tbody tr td{
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
