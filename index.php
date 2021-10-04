@@ -14,7 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
-  <body>
+  <body class="background">
 
     <!-- Sidebar start -->
     <div class="sidebar">
@@ -93,10 +93,12 @@
        <!-- Sidebar end -->
 
        <div class="home_content">
-           <div class="login">
-              <h3>PLEASE LOGIN</h3>
-               <a class="btn btn-login" href="./loginpage.php" type="button">LOGIN</a>
-           </div>
+       <div class="index-header">KATA ON TOP</div>
+       <div class="index-subheader">HOME</div>
+       <div class="btn-login-part">
+        <a id="btn" class="btn btn-login" href="./loginpage.php" type="button"><div class= "btn-login-text">LOGIN</div></a></div>
+
+       
        </div>
 
 

@@ -378,8 +378,19 @@ body{
     border-radius: 20px;
     background-color: rgb(224, 226, 228);
 }
-.home_content .login{
+.background{
+
     background-image:url("../images/background.jpg");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home_content .login{
     min-height: 100vh;
     width: 100%;
     text-align: center;   
@@ -388,6 +399,7 @@ body{
     margin-top: 50px;
 }
 .home_content .login .btn-login{
+    text-align:center;
     margin-top: 550px;
     background-color: #fff;
     color: grey;
@@ -445,4 +457,35 @@ body{
     padding: 6px;
     border-radius: 12px;
     border: none;
+}
+
+.index-header{
+    text-align:left;
+    font-size: 25px;
+    margin-top: 2%;
+    margin-left: 1.5%;
+    font-weight: 800;
+}
+
+.index-subheader{
+    text-align:left;
+    font-size: 20px;
+    margin-left: 1.5%;
+    margin-top: -0.5%;
+    font-weight: 500;
+}
+
+.btn-login-part{
+    text-align: center;
+    margin-top: 35%;
+    background-color: rgb(243, 243, 243,0.7);
+    border-radius: 12px;
+    padding: 6px;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-login-text{
+    font-size: 20px;
+    font-weight: 800;
 }
