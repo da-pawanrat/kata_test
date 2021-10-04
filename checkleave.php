@@ -198,8 +198,16 @@
 
         <!-- Client data details -->
         <div class="client-table"> 
+            <div class="row">
+              <div class="col-2 header-btn">
+                <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
+              </div>
+              <div class="col-2 header-btn">
+                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
+              </div>
+            </div>
               
-            <table class="table table-hover mt-5">
+            <table class="table table-hover">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -229,7 +237,8 @@
                   <td>17/01/21-19/01/21</td>
                   <td>1</td>
                   <td>Personal Leave</td>
-                  <td style="color:green">Approve</td>           
+                  <td style="color:green">Approve</td>
+                 
                   
                 </tr>
                 <tr>
@@ -256,12 +265,13 @@
          </div>
          <div class="col-2" >
              <a href="./leavework.php">
-             <button class="btn btn-click"  style="background-color:LightGreen" >ข้อมูลการลางาน<br>LEAVE WORKING DAY</button>
+             <button class="btn btn-click"  style="background-color:LightGreen" >ข้อมุลการลางาน<br>LEAVE WORKING DAY</button>
 
              </a>
           
 
-          </div> 
+          </div>
+          
        </div>
 
 
