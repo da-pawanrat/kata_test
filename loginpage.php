@@ -99,7 +99,7 @@
                <div class="blank">blank</div>
                <div class="authen-header">KATA TOP VILLA</div>
                <div class="authen-login-subheader">LOGIN</div>
-                    <form action="./login.php" method="post">
+             <form action="./dashboard.php" method="post">
 
 
               <div class="input-container">
