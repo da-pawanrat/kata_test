@@ -65,7 +65,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./leavework.php">
               <i class='bx bx-calendar-minus' ></i>
               <span class="links_name">Leave working day</span>
             </a>
@@ -73,7 +73,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./labor.php">
               <i class='bx bx-file' ></i>
               <span class="links_name">Labor contract</span>
             </a>
@@ -81,7 +81,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./salary.php">
               <i class='bx bxs-bank' ></i>
               <span class="links_name">Salary</span>
             </a>
@@ -148,8 +148,11 @@
         <!-- Client data details -->
         <div class="client-table"> 
             <div class="row">
+              <div class="col-2 header-table">
+                <p>Employee Table</p>
+              </div>
               <div class="col-2 header-btn">
-                <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
+                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
               </div>
               <div class="col-2 header-btn">
                 <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
@@ -159,37 +162,73 @@
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
+                  <th>Employee ID</th>
+                  <th>ID card</th>
+                  <th>Position</th>
+                  <th>Name</th>
+                  <th>Date of birth</th>
                   <th>Email</th>
+                  <th>Telephone</th>
+                  <th>Address</th>
+                  <th>Bank Acoount number</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
+                  <td>1001</td>
+                  <td>110025634000111</td>
+                  <td>Staff</td>
+                  <td>Pawanrat Sangmuang</td>
+                  <td>12/05/2021</td>
+                  <td>pawanrat@gmail.com</td>
+                  <td>0995688875</td>
+                  <td>Phuket,Thailand</td>
+                  <td>1234567890</td>
                 </tr>
                 <tr>
-                  <td>Mary</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
+                  <td>1003</td>
+                  <td>11002563665896</td>
+                  <td>Maid</td>
+                  <td>Atimay Pengchai</td>
+                  <td>01/01/2011</td>
+                  <td>atimayt@gmail.com</td>
+                  <td>0992222275</td>
+                  <td>Phuket,Thailand</td>
+                  <td>5896542765</td>
                 </tr>
                 <tr>
-                  <td>July</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
+                  <td>1004</td>
+                  <td>116986354000111</td>
+                  <td>Staff</td>
+                  <td>Tagolwan Keawmanee</td>
+                  <td>03/12/2002</td>
+                  <td>tagolwan@gmail.com</td>
+                  <td>0995600000</td>
+                  <td>Songkla,Thailand</td>
+                  <td>5369865421</td>
                 </tr>
                 <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                  </tr>
-                  <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                  </tr>
+                  <td>1009</td>
+                  <td>110025634000111</td>
+                  <td>Staff</td>
+                  <td>daada</td>
+                  <td>30/03/1999</td>
+                  <td>daada@gmail.com</td>
+                  <td>0990000000</td>
+                  <td>Phuket,Thailand</td>
+                  <td>9876543210</td>
+                </tr>
+                <tr>
+                  <td>1011</td>
+                  <td>110025634000111</td>
+                  <td>Maid</td>
+                  <td>Ying</td>
+                  <td>27/05/1989</td>
+                  <td>ying@gmail.com</td>
+                  <td>0999999999</td>
+                  <td>Phuket,Thailand</td>
+                  <td>1234567890</td>
+                </tr>
               </tbody>
             </table>
           </div>

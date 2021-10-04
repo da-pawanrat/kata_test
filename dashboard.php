@@ -67,7 +67,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./leavework.php">
               <i class='bx bx-calendar-minus' ></i>
               <span class="links_name">Leave working day</span>
             </a>
@@ -75,7 +75,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./labor.php">
               <i class='bx bx-file' ></i>
               <span class="links_name">Labor contract</span>
             </a>
@@ -83,7 +83,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./salary.php">
               <i class='bx bxs-bank' ></i>
               <span class="links_name">Salary</span>
             </a>

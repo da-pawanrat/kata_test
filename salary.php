@@ -41,7 +41,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./client.php">
               <i class='bx bx-table' ></i>
               <span class="links_name">Client data</span>
             </a>
@@ -81,7 +81,7 @@
           </li>
 
           <li>
-            <a href="./salary.php">
+            <a href="#">
               <i class='bx bxs-bank' ></i>
               <span class="links_name">Salary</span>
             </a>
@@ -124,9 +124,9 @@
          <!-- Title of Client data details -->
       <div class="cli-table">
         <div class="title-cli-table row">
-            <div class="col-5 title-name">
-              <p id="title-eng">CLIENT DATA</p>
-              <p id="title-thai">ข้อมูลลูกค้า</p>
+            <div class="col-3 title-name">
+            <p id="title-eng">LEAVE WORKING DAY</p>
+            <p id="title-thai">ข้อมูลการลางาน</p>
             </div>
             <div class="col-1">
               <div class="dropdown">
@@ -169,12 +169,25 @@
             <div class="col-2">
               <div class="dropdown">
                 <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Type(ประเภทของลูกค้า)
+                  ตำแหน่ง(Employee)
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">ALL</a>
-                  <a class="dropdown-item" href="#">DAILY</a>
-                  <a class="dropdown-item" href="#">MONTHLY</a>
+                  <a class="dropdown-item" href="#">Staff</a>
+                  <a class="dropdown-item" href="#">Maid</a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="dropdown">
+                <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Type(ประเภทของพนักงาน)
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">ALL</a>
+                  <a class="dropdown-item" href="#">MAID</a>
+                  <a class="dropdown-item" href="#">STAFF</a>
                 </div>
               </div>
             </div>
@@ -183,161 +196,143 @@
             </div>
         </div>
 
+        <div class="client-table"> 
+            <div class="row">
+              <div class="col-3 header-table">
+                <p>Leave working day data table</p>
+              </div>
+              <div class="col-2 header-btn">
+                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
+              </div>
+              <div class="col-2 header-btn">
+                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
+              </div>
+            </div>
         <!-- Client data details -->
         <div class="client-table"> 
-            <div class="row">
-              <div class="col-3 header-table">
-                <p>KATA TOP VILLA</p>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
-            </div>
-              
+            
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Type of Stay</th>
-                  <th>Room Number</th>
-                  <th>ID card / Passport</th>
-                  <th>Customer name</th>
-                  <th>Total guest</th>
-                  <th>Checkin date</th>
-                  <th>Checkout date</th>
-                  <th>Price</th>
-                  <th>Tel</th>
-                  <th>Reservation date</th>
-                  <th>Count payment</th>
-                  <th>Payment status</th>
-                  <th>Booking agent</th>
-                  <th>Status</th>
+                    <th>No.</th>
+                  <th>Position</th>
+                  <th>Name</th>
+                  <th>Salary</th>
+                  <th>Socisl security payment</th>
+                  <th>Borrow money</th>
+                  <th>Facility cost</th>
+                  <th>Advance money</th>
+                  <th>Contract insurance</th>
+                  <th>Total paid</th>
+                  <th>Bank number</th>
+                  <th>Remark</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
                   <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Monthly</td>
-                  <td>2L</td>
-                  <td>10063578954265</td>
+                  <td>Staff</td>
                   <td>Tagolwan Keawmanee</td>
-                  <td>1</td>
-                  <td>12/03/2021</td>
-                  <td>15/05/2021</td>
-                  <td>17000</td>
-                  <td>0995688875</td>
-                  <td>09/02/2021</td>
-                  <td></td>
-                  <td>Pay 100%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
+                  <td>10500</td>
+                  <td>500</td>
+                  <td>500</td>
+                  <td>1500</td>
+                  <td>-</td>
+                  <td>500</td>
+                  <td>7500</td>
+                  <td>KTB 1020135678</td>
+                  <td>-</td>
                 </tr>
                 <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
+                  
+                  <td>2</td>
+                  <td>Staff</td>
                   <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
+                  <td>13500</td>
+                  <td>500</td>
                   <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
+                  <td>1500</td>
+                  <td>-</td>
+                  <td>1000</td>
+                  <td>10000</td>
+                  <td>KTB 1023654780</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Maid</td>
+                  <td>Atimay Pengchai</td>
+                  <td>14000</td>
+                  <td>500</td>
+                  <td></td>
+                  <td>1500</td>
+                  <td>-</td>
+                  <td></td>
+                  <td>13500</td>
+                  <td>KTB 1234567890</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Total</td>
+                  <td>38000</td>
+                  <td>1500</td>
+                  <td>500</td>
+                  <td>3500</td>
+                  <td>-</td>
+                  <td>1500</td>
+                  <td>31000</td>
+                  <td></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
           </div>
+      </div>
 
-         <!-- Client data details -->
-        <div class="client-table"> 
-            <div class="row">
-              <div class="col-3 header-table">
-                <p>KATA TOP VILLA</p>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
-            </div>
-              
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Type of Stay</th>
-                  <th>Room Number</th>
-                  <th>ID card / Passport</th>
-                  <th>Customer name</th>
-                  <th>Total guest</th>
-                  <th>Checkin date</th>
-                  <th>Checkout date</th>
-                  <th>Price</th>
-                  <th>Tel</th>
-                  <th>Reservation date</th>
-                  <th>Count payment</th>
-                  <th>Payment status</th>
-                  <th>Booking agent</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Monthly</td>
-                  <td>2L</td>
-                  <td>10063578954265</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>1</td>
-                  <td>12/03/2021</td>
-                  <td>15/05/2021</td>
-                  <td>17000</td>
-                  <td>0995688875</td>
-                  <td>09/02/2021</td>
-                  <td></td>
-                  <td>Pay 100%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
 
          </div> 
        </div>

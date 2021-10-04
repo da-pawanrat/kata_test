@@ -65,7 +65,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./leavework.php">
               <i class='bx bx-calendar-minus' ></i>
               <span class="links_name">Leave working day</span>
             </a>
@@ -73,7 +73,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./labor.php">
               <i class='bx bx-file' ></i>
               <span class="links_name">Labor contract</span>
             </a>
@@ -81,7 +81,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./salary.php">
               <i class='bx bxs-bank' ></i>
               <span class="links_name">Salary</span>
             </a>
@@ -197,7 +197,12 @@
         </div>
 
         <!-- Client data details -->
-        <div class="client-table"> 
+        <div class="client-table">
+          <div class="row">
+          <div class="col-2 header-table">
+                <p>Checkin Data Table</p>
+              </div>
+          </div> 
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -218,7 +223,7 @@
                   <td>08.00</td>
                   <td>18.00</td>
                   <td></td>
-                  <td></td>
+                  <td>-</td>
                 </tr>
                 <tr>
                   <td>25/06/2021</td>
@@ -227,7 +232,7 @@
                   <td>07.00</td>
                   <td>17.00</td>
                   <td></td>
-                  <td></td>
+                  <td>-</td>
                 </tr>
                 <tr>
                   <td>25/06/2021</td>
@@ -235,6 +240,24 @@
                   <td>Atimay Pengchai</td>
                   <td>09.00</td>
                   <td>19.00</td>
+                  <td></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>
