@@ -92,7 +92,7 @@
        </div>
        <!-- Sidebar end -->
 
-       <div class="index-header">KATA ON TOP</div>
+       <div class="index-header">KATA TOP VILLA</div>
        <div class="index-subheader">HOME</div>
        <div class="btn-login-part">
         <a  class="btn btn-login" href="./loginpage.php" type="button"><div class= "btn-login-text">LOGIN</div></a></div>
