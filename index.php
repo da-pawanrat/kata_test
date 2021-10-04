@@ -92,14 +92,12 @@
        </div>
        <!-- Sidebar end -->
 
-       <div class="home_content">
        <div class="index-header">KATA ON TOP</div>
        <div class="index-subheader">HOME</div>
        <div class="btn-login-part">
-        <a id="btn" class="btn btn-login" href="./loginpage.php" type="button"><div class= "btn-login-text">LOGIN</div></a></div>
+        <a  class="btn btn-login" href="./loginpage.php" type="button"><div class= "btn-login-text">LOGIN</div></a></div>
 
        
-       </div>
 
 
 
