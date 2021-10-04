@@ -423,8 +423,11 @@ body{
     justify-content: center;
     align-items: center;
 }
-.form-page .container .form-add{
+.form-page .container{
     max-width: 100%;
+}
+.form-page .container .form-add{
+    width: 100%;
     padding: 1rem 2rem;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(50px);
@@ -441,7 +444,12 @@ body{
     border-radius: 12px;
     padding: 6px;
 }
-.form-add .row .col-sm-4 .text{
+.form-add .row .col-sm-3 .row .text{
+    padding: 6px;
+    border-radius: 12px;
+    border: none;
+}
+.form-add .row .col-sm-4 .row .text{
     padding: 6px;
     border-radius: 12px;
     border: none;

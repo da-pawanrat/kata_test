@@ -202,10 +202,10 @@
                 <p>Leave working day data table</p>
               </div>
               <div class="col-2 header-btn">
-                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
+                <a class="btn btn-add-a" href="./formadd_leave.php" role="button">เพิ่มข้อมูล</a>
               </div>
               <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
+                <a class="btn btn-edit" href="./formedit_leave.php" role="button">แก้ไขข้อมูล</a>
               </div>
             </div>
         <!-- Client data details -->

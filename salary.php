@@ -201,12 +201,6 @@
               <div class="col-3 header-table">
                 <p>Salary Table</p>
               </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
             </div>
         <!-- Client data details -->
         <div class="client-table"> 

@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="form-add" style="width: 800px;">
                     <div class="header-form">
-                        <p>ADD CLIENT DATA -- เพิ่มข้อมูลลูกค้า</p>
+                        <p>EDIT EMPLOYEE DATA -- แก้ไขข้อมูลพนักงาน</p>
                     </div>
                     <!-- Form edit client data to database -->
                     <form action="./client.php" method="post">
@@ -40,12 +40,12 @@
                             <input type="text" name="tel" id="tel" class="text" placeholder="Telephone">
                         </div>
                         <div class="row">
-                        <label for="reserve">Reservation Date</label><br>
-                            <input type="date" name="reserve" id="reserve" class="text">
+                        <label for="bank">Bank Name</label><br>
+                            <input type="text" name="bank" id="bank" class="text" placeholder="Bank name">
                         </div>
                         <div class="row">
-                        <label for="total">Total Guest</label><br>
-                            <input type="text" name="total" id="total" class="text" placeholder="Total Guest">
+                        <label for="bmoney">Borrow money</label><br>
+                            <input type="text" name="bmoney" id="bmoney" class="text" placeholder="Borrow money">
                         </div>
                         <div class="row">
                         <label for="paystatus">Payment status</label><br>
@@ -64,28 +64,25 @@
                             <input type="email" name="email" id="email" class="text" placeholder="Email">
                         </div>
                         <div class="row">
-                            <label for="checkin">Check In Date</label><br>
-                            <input type="date" name="checkin" id="checkin" class="text">
-                        </div>
-                        <div class="row">
-                        <label for="typestay">Type of Stay</label><br>
-                            <select class="form-select text" aria-label="Default select example" id="typestay" name="typestay">
-                                <option selected>Daily</option>
-                                <option value="monthly">Monthly</option>
+                        <label for="type">Type of Employee</label><br>
+                            <select class="form-select text" aria-label="Default select example" id="type" name="type">
+                                <option value="fulltime-staff" selected>Full-time Staff</option>
+                                <option value="parttime-staff">Part-time Staff</option>
+                                <option value="fulltime-maid">Full-time Maid</option>
+                                <option value="parttime-maid">Part-time Maid</option>
                             </select>
+                        </div>              
+                        <div class="row">
+                        <label for="account">Bank Account</label><br>
+                            <input type="text" name="account" id="account" class="text" placeholder="Bank Account Number">
                         </div>
                         <div class="row">
                         <label for="price">Price</label><br>
                             <input type="text" name="price" id="price" class="text" placeholder="Price">
                         </div>
                         <div class="row">
-                        <label for="booking">Booking Agent</label><br>
-                            <select class="form-select text" aria-label="Default select example" id="booking" name="tbooking">
-                                <option value="walkin" selected>Walk in</option>
-                                <option value="airbnb">Airbnb</option>
-                                <option value="agoda">Agoda</option>
-                                <option value="expedia">Expedia</option>
-                            </select>
+                        <label for="fcost">Facility cost</label><br>
+                            <input type="text" name="cost" id="cost" class="text" placeholder="acility cost">
                         </div>
                     </div>
                     <div class="col-1"></div>
@@ -99,29 +96,18 @@
                             <input type="text" name="address" id="address" class="text" placeholder="Address">
                         </div>
                         <div class="row">
-                        <label for="checkout">Check Out Date</label><br>
-                            <input type="date" name="checkout" id="checkout" class="text">
+                        <label for="file">Labor contract</label><br>
+                            <input type="file" id="file" class="text" name="file" accept=".pdf,.doc"/>
                         </div>
                         <div class="row">
-                        <label for="room">Room Number</label><br>
-                            <select class="form-select text" aria-label="Default select example" id="room" name="room">
-                                <option value="1R" selected>1R</option>
-                                <option value="2R">2R</option>
-                                <option value="1L">1L</option>
-                                <option value="2L">2L</option>
-                            </select>
+                        <label for="salary">Salary(BATH)</label><br>
+                            <input type="text" name="salary" id="salary" class="text" placeholder="Salary">
                         </div>
                         <div class="row">
-                        <label for="payment">Count payment</label><br>
-                            <input type="text" name="payment" id="payment" class="text" placeholder="Count payment time">
+                        <label for="ssp">Social security payment</label><br>
+                            <input type="text" name="ssp" id="ssp" class="text" placeholder="Social security payment">
                         </div>
-                        <div class="row">
-                        <label for="status">Status</label><br>
-                            <select class="form-select text" aria-label="Default select example" id="status" name="status">
-                                <option value="active" selected>Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
-                        </div>
+                        
                     </div>
                     </div>
 
@@ -129,7 +115,7 @@
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./client.php"><button type="button" id="next1" class="btn btn-primary">ADD</button></a>
+                                    <a href="./employee.php"><button type="button" id="next1" class="btn btn-success">COMFIRM</button></a>
                                 </div>
                                 <div class="col-sm-3">
                                 <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>

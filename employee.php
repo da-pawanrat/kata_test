@@ -152,10 +152,10 @@
                 <p>Employee Table</p>
               </div>
               <div class="col-2 header-btn">
-                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
+                <a class="btn btn-add-a" href="./formadd_employee.php" role="button">เพิ่มข้อมูล</a>
               </div>
               <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
+                <a class="btn btn-edit" href="./formedit_employee.php" role="button">แก้ไขข้อมูล</a>
               </div>
             </div>
               

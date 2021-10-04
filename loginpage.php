@@ -94,7 +94,7 @@
 
        <div class="home_content">
            <div class="login">
-             <div class="form-group">
+             <div class="form-groups">
                <div class="form-login">
                     <form action="./login.php" method="post">
                     <label for="username" class="col-sm-3 control-label">Username</label>

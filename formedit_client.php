@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="form-add" style="width: 800px;">
                     <div class="header-form">
-                        <p>ADD CLIENT DATA -- เพิ่มข้อมูลลูกค้า</p>
+                        <p>EDIT CLIENT DATA -- แก้ไขข้อมูลลูกค้า</p>
                     </div>
                     <!-- Form edit client data to database -->
                     <form action="./client.php" method="post">
@@ -129,7 +129,7 @@
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./client.php"><button type="button" id="next1" class="btn btn-primary">ADD</button></a>
+                                    <a href="./client.php"><button type="button" id="next1" class="btn btn-success">COMFIRM</button></a>
                                 </div>
                                 <div class="col-sm-3">
                                 <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>

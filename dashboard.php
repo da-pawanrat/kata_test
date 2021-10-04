@@ -111,7 +111,7 @@
          <h4 id="title_name">KATA TOP VILLA</h4>
          <p id="name_page">HOME</p>
          <div class="container">
-           <div class="dashboards">
+           <div class="dashboards text-center">
              <div class="title_dash">
              <p>RECENT ROOM STATUS - สถานะห้องพักล่าสุด</p>
              </div>

@@ -157,14 +157,14 @@
 </div>
     <div class="boxing" style="padding:25px;margin-left:550px">
         <div class="box-1" style="float:left;">
-            <a href="">
-            <button type="submit"class="btn btn-click"  style="background-color:LightGreen" >APPROVE</button>
+            <a href="./leavework.php">
+            <button type="button"class="btn btn-click"  style="background-color:LightGreen" >APPROVE</button>
             </a>
 
         </div>
         <div class="box-2" style="float:left;margin-left:15px">
-            <a href="">
-            <button type="submit" class="btn btn-click"  style="background-color:IndianRed" >DISAPPROVE</button>
+            <a href="./checkleave.php">
+            <button type="button" class="btn btn-click"  style="background-color:IndianRed" >DISAPPROVE</button>
             </a>
 
         </div>
