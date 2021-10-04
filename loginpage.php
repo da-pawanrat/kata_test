@@ -92,7 +92,7 @@
        </div>
        <!-- Sidebar end -->
 
-       <div class="home_content">
+       <div class="login-content">
            <div class="login">
              <div class="form-groups">
                <div class="form-login">
