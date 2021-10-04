@@ -2,6 +2,8 @@ let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
 let searchBtn = document.querySelector(".bx-search-alt");
 
+
+
 btn.onclick = function (){
     sidebar.classList.toggle("active");
 }
@@ -9,6 +11,11 @@ btn.onclick = function (){
 searchBtn.onclick = function (){
     sidebar.classList.toggle("active");
 }
+
+$(function() {
+    $('#datetimepicker1').datetimepicker();
+});
+
 
 
 

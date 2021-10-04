@@ -109,7 +109,7 @@
          <div class="row">
            <div class="col-sm-8 ">
               <h4 id="title_name">KATA TOP VILLA</h4>
-              <p id="name_page">CLIENT DATA</p></div>
+              <p id="name_page">LEAVE WORKING DAY</p></div>
            <div class="col-sm-4">
             <div class="input-group rounded">
               <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -273,6 +273,14 @@
             </table>
           </div>
       </div>
+      <div class="col-2" >
+             <a href="./checkleave.php">
+             <button class="btn btn-click"  style="background-color:LightGreen" >ตรวจสอบคำร้องขอลางาน<br>CHECK LEAVE WORK REOUESTS</button>
+
+             </a>
+          
+
+          </div> 
 
 
          </div> 

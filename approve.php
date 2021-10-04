@@ -49,7 +49,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./employee.php">
               <i class='bx bx-user'></i>
               <span class="links_name">Employee data</span>
             </a>
@@ -109,7 +109,7 @@
          <div class="row">
            <div class="col-sm-8 ">
               <h4 id="title_name">KATA TOP VILLA</h4>
-              <p id="name_page">EMPLOYEE DATA</p></div>
+              <p id="name_page">LEAVE WORKING DAY</p></div>
            <div class="col-sm-4">
             <div class="input-group rounded">
               <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -122,120 +122,56 @@
          </div>
         
          <!-- Title of Client data details -->
-      <div class="cli-table">
-        <div class="title-cli-table row">
-            <div class="col-8 title-name">
-              <p id="title-eng">EMPLOYEE DATA</p>
-              <p id="title-thai">ข้อมูลพนักงาน</p>
-            </div>
-            <div class="col-2">
-              <div class="dropdown">
-                <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Type(ประเภทของลูกค้า)
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">ALL</a>
-                  <a class="dropdown-item" href="#">DAILY</a>
-                  <a class="dropdown-item" href="#">MONTHLY</a>
+    <div class="cli-table">
+            <div class="title-cli-table row">
+                <div class="col-3 title-name">
+                <p id="title-eng">LEAVE WORK REQUEST</p>
+                <p id="title-thai">คำร้องขอลางาน</p>
                 </div>
-              </div>
+                
             </div>
-            <div class="col-2">
-              <button class="btn btn-click" type="submit">CLICK</button>
-            </div>
-        </div>
 
         <!-- Client data details -->
-        <div class="client-table"> 
-            <div class="row">
-              <div class="col-2 header-table">
-                <p>Employee Table</p>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
+        <div class="col-5" style="border-radius:25px; background-color: Gainsboro; margin: 20px 0px 0px 375px ; ">
+            
+                <div style="padding:12px">
+                    <p>Name : Atimay Pengchai</p>
+                    <p>Staff ID: 103</p>
+                    <p>Job Title: Staff</p>
+                    <p>Type of emplyee: Full-time</p>
+                    <p>Tel : 027-7111111</p>
+
+                </div>
+                <hr width="100%" >
+                <div style="padding:12px">
+                    <p>Leave Type: Sick Leave</p>
+                    <p>Begin Date : 11/06/21</p>
+                    <p>Due Date: 12/06/21</p>
+                    <p>Remrk:</p>
+
+                </div>
+                
+    
+        </div>
+    </div>
+        <div class="boxing" style="padding:25px;margin-left:550px">
+            <div class="box-1" style="float:left;">
+                <a href="">
+                <button class="btn btn-click"  style="background-color:LightGreen" >APPROVE</button>
+                </a>
+
             </div>
-              
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Employee ID</th>
-                  <th>ID card</th>
-                  <th>Position</th>
-                  <th>Name</th>
-                  <th>Date of birth</th>
-                  <th>Email</th>
-                  <th>Telephone</th>
-                  <th>Address</th>
-                  <th>Bank Acoount number</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1001</td>
-                  <td>110025634000111</td>
-                  <td>Staff</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>12/05/2021</td>
-                  <td>pawanrat@gmail.com</td>
-                  <td>0995688875</td>
-                  <td>Phuket,Thailand</td>
-                  <td>1234567890</td>
-                </tr>
-                <tr>
-                  <td>1003</td>
-                  <td>11002563665896</td>
-                  <td>Maid</td>
-                  <td>Atimay Pengchai</td>
-                  <td>01/01/2011</td>
-                  <td>atimayt@gmail.com</td>
-                  <td>0992222275</td>
-                  <td>Phuket,Thailand</td>
-                  <td>5896542765</td>
-                </tr>
-                <tr>
-                  <td>1004</td>
-                  <td>116986354000111</td>
-                  <td>Staff</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>03/12/2002</td>
-                  <td>tagolwan@gmail.com</td>
-                  <td>0995600000</td>
-                  <td>Songkla,Thailand</td>
-                  <td>5369865421</td>
-                </tr>
-                <tr>
-                  <td>1009</td>
-                  <td>110025634000111</td>
-                  <td>Staff</td>
-                  <td>daada</td>
-                  <td>30/03/1999</td>
-                  <td>daada@gmail.com</td>
-                  <td>0990000000</td>
-                  <td>Phuket,Thailand</td>
-                  <td>9876543210</td>
-                </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>110025634000111</td>
-                  <td>Maid</td>
-                  <td>Ying</td>
-                  <td>27/05/1989</td>
-                  <td>ying@gmail.com</td>
-                  <td>0999999999</td>
-                  <td>Phuket,Thailand</td>
-                  <td>1234567890</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <div class="box-2" style="float:left;margin-left:15px">
+                <a href="">
+                <button class="btn btn-click"  style="background-color:IndianRed" >DISAPPROVE</button>
+                </a>
 
+            </div>
+            
+        </div>
 
-         </div> 
-       </div>
+        
+        
 
 
 

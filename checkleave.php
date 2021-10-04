@@ -41,7 +41,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="./client.php">
               <i class='bx bx-table' ></i>
               <span class="links_name">Client data</span>
             </a>
@@ -109,7 +109,7 @@
          <div class="row">
            <div class="col-sm-8 ">
               <h4 id="title_name">KATA TOP VILLA</h4>
-              <p id="name_page">CLIENT DATA</p></div>
+              <p id="name_page">LEAVE WORKING DAY</p></div>
            <div class="col-sm-4">
             <div class="input-group rounded">
               <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -124,9 +124,9 @@
          <!-- Title of Client data details -->
       <div class="cli-table">
         <div class="title-cli-table row">
-            <div class="col-5 title-name">
-              <p id="title-eng">CLIENT DATA</p>
-              <p id="title-thai">ข้อมูลลูกค้า</p>
+            <div class="col-3 title-name">
+              <p id="title-eng">LEAVE WORKING DAY</p>
+              <p id="title-thai">ข้อมูลการลางาน</p>
             </div>
             <div class="col-1">
               <div class="dropdown">
@@ -169,12 +169,25 @@
             <div class="col-2">
               <div class="dropdown">
                 <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Type(ประเภทของลูกค้า)
+                  ตำแหน่ง(Employee)
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">ALL</a>
-                  <a class="dropdown-item" href="#">DAILY</a>
-                  <a class="dropdown-item" href="#">MONTHLY</a>
+                  <a class="dropdown-item" href="#">Staff</a>
+                  <a class="dropdown-item" href="#">Maid</a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="dropdown">
+                <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Type(ประเภทของพนักงาน)
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">ALL</a>
+                  <a class="dropdown-item" href="#">MAID</a>
+                  <a class="dropdown-item" href="#">STAFF</a>
                 </div>
               </div>
             </div>
@@ -186,95 +199,6 @@
         <!-- Client data details -->
         <div class="client-table"> 
             <div class="row">
-              <div class="col-3 header-table">
-                <p>KATA TOP VILLA</p>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-add" href="./formadd_client.php" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
-            </div>
-              
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Type of Stay</th>
-                  <th>Room Number</th>
-                  <th>ID card / Passport</th>
-                  <th>Customer name</th>
-                  <th>Total guest</th>
-                  <th>Checkin date</th>
-                  <th>Checkout date</th>
-                  <th>Price</th>
-                  <th>Tel</th>
-                  <th>Reservation date</th>
-                  <th>Count payment</th>
-                  <th>Payment status</th>
-                  <th>Booking agent</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Monthly</td>
-                  <td>2L</td>
-                  <td>10063578954265</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>1</td>
-                  <td>12/03/2021</td>
-                  <td>15/05/2021</td>
-                  <td>17000</td>
-                  <td>0995688875</td>
-                  <td>09/02/2021</td>
-                  <td></td>
-                  <td>Pay 100%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-         <!-- Client data details -->
-        <div class="client-table"> 
-            <div class="row">
-              <div class="col-3 header-table">
-                <p>KATA TOP VILLA</p>
-              </div>
               <div class="col-2 header-btn">
                 <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
               </div>
@@ -286,60 +210,66 @@
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Type of Stay</th>
-                  <th>Room Number</th>
-                  <th>ID card / Passport</th>
-                  <th>Customer name</th>
-                  <th>Total guest</th>
-                  <th>Checkin date</th>
-                  <th>Checkout date</th>
-                  <th>Price</th>
-                  <th>Tel</th>
-                  <th>Reservation date</th>
-                  <th>Count payment</th>
-                  <th>Payment status</th>
-                  <th>Booking agent</th>
-                  <th>Status</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Summary Day</th>
+                  <th>Leave Type</th>
+                  <th>Approval<br>Status</th>
+                  
+                  
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
+                  <td>101</td>
                   <td>Pawanrat Sangmuang</td>
+                  <td>03/01/21-04/01/21</td>
                   <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
+                  <td>Sick Leave</td>
+                  <td style="color:green">Approve</td>
+                  
+
                 </tr>
                 <tr>
-                  <td>Monthly</td>
-                  <td>2L</td>
-                  <td>10063578954265</td>
-                  <td>Tagolwan Keawmanee</td>
+                  <td>102</td>
+                  <td>Tagolwan Kaewmanee</td>
+                  <td>17/01/21-19/01/21</td>
                   <td>1</td>
-                  <td>12/03/2021</td>
-                  <td>15/05/2021</td>
-                  <td>17000</td>
-                  <td>0995688875</td>
-                  <td>09/02/2021</td>
-                  <td></td>
-                  <td>Pay 100%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
+                  <td>Personal Leave</td>
+                  <td style="color:green">Approve</td>           
+                  
                 </tr>
+                <tr>
+                  <td>102</td>
+                  <td ><a href="./approve.php">Atimay Pengchai
+
+                  </a></td>
+                  <td>17/01/21-19/01/21</td>
+                  <td>1</td>
+                  <td>Personal Leave</td>
+                  <td style="color:goldenrod" >Pending Approve</td>
+                 
+                  
+                </tr>
+           
+               
+                  
               </tbody>
             </table>
           </div>
+          
 
-         </div> 
+
+         </div>
+         <div class="col-2" >
+             <a href="./leavework.php">
+             <button class="btn btn-click"  style="background-color:LightGreen" >ข้อมูลการลางาน<br>LEAVE WORKING DAY</button>
+
+             </a>
+          
+
+          </div> 
        </div>
 
 

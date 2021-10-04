@@ -109,7 +109,7 @@
          <div class="row">
            <div class="col-sm-8 ">
               <h4 id="title_name">KATA TOP VILLA</h4>
-              <p id="name_page">CLIENT DATA</p></div>
+              <p id="name_page">SALARY DATA</p></div>
            <div class="col-sm-4">
             <div class="input-group rounded">
               <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -125,8 +125,8 @@
       <div class="cli-table">
         <div class="title-cli-table row">
             <div class="col-3 title-name">
-            <p id="title-eng">LEAVE WORKING DAY</p>
-            <p id="title-thai">ข้อมูลการลางาน</p>
+            <p id="title-eng">SALARY</p>
+            <p id="title-thai">ข้อมูลเงินเดือนพนักงาน</p>
             </div>
             <div class="col-1">
               <div class="dropdown">
@@ -199,7 +199,7 @@
         <div class="client-table"> 
             <div class="row">
               <div class="col-3 header-table">
-                <p>Leave working day data table</p>
+                <p>Salary Table</p>
               </div>
               <div class="col-2 header-btn">
                 <a class="btn btn-add-a" href="#" role="button">เพิ่มข้อมูล</a>
