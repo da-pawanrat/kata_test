@@ -14,7 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
-  <body>
+  <body class="background-login">
 
     <!-- Sidebar start -->
     <div class="sidebar">
@@ -96,29 +96,42 @@
            <div class="login">
              <div class="form-groups">
                <div class="form-login">
+               <div class="blank">blank</div>
+               <div class="authen-header">KATA TOP VILLA</div>
+               <div class="authen-login-subheader">LOGIN</div>
                     <form action="./login.php" method="post">
-                    <label for="username" class="col-sm-3 control-label">Username</label>
+
+
+              <div class="input-container">
+                <input type="text" name="userid"  required=""/>
+                <label>USERNAME</label>		
+              </div>
+
+              <div class="input-container">
+                <input type="text" name="userid"  required=""/>
+                <label>PASSWORD</label>		
+              </div>
+
+                    <!-- <label for="username" class="col-sm-3 control-label">Username</label>
                     <div class="col-sm-4">
                         <input type="text" name="userid" class="form-control" requireed placeholder="Username">  
                     </div>
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-4">
                         <input type="password" name="password" class="form-control" requireed placeholder="Password">  
-                    </div>
-                    <input type="submit" class="btn btn-success mt-2" name="submit" value="Login">
+                    </div> -->
+                    <div class="blank">blank</div>   <div class="blank">blank</div>
+                    <input type="submit" class="btn-login-page btn-success mt-2 submit" name="submit" value="Login" >
                 </form>
-               </div>
-               <div class="group mt-5">
-               <p>You don't have a account register here?</p>
-               <p><a href="./register.php">Register</a></p>
-               </div>
+              
+               <!-- <div class="group mt-5">
+               <p>You don't have a account register here?</p>-->
+               <p class="register"><a href="./register.php">REGISTER</a></p>
+               <div class="blank">blank</div>   <div class="blank">blank</div>
+            
               </div>
            </div>
        </div>
-
-
-
-
 
 
       
