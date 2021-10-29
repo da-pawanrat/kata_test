@@ -129,10 +129,37 @@
        </div>
        <!-- Sidebar end -->
 
-       <div class="home_content">
-           <div class="regis">
+       <div class="login-content">
+           <div class="login">
+             <div class="form-groups">
+               <div class="form-login">
+                <div class="blank">blank</div>
+                <div class="authen-login-subheader">REGISTER</div>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
+                <div class="input-container">
+                  <input type="text" name="username"  required=""/>
+                  <label>USERNAME</label>		
+                </div>
+
+                <div class="input-container">
+                  <input type="password" name="password"  required=""/>
+                  <label>PASSWORD</label>		
+                </div>
+
+                <div class="input-container">
+                  <input type="text" name="firstname"  required=""/>
+                  <label>FIRSTNAME</label>		
+                </div>
+
+                <div class="input-container">
+                  <input type="text" name="lastname"  required=""/>
+                  <label>LASTNAME</label>		
+                </div>
+
+                <div class="blank">blank</div>   <div class="blank">blank</div>
+
+                  <!-- 
                     <label for="username">USERNAME</label>
                     <input type="text" name="username" placeholder="Enter your username" require>
                     <br>
@@ -145,12 +172,17 @@
                     <label for="lastname">LASTNAME</label>
                     <input type="lastname" name="lastname" placeholder="Enter your lastname" require>
                     <br>
-                    <input type="submit" name="submit" value="Submit">
+                     -->
+                    <input type="submit" name="submit" value="Submit" class="btn btn-primary">
 
                 </form>
            </div>
-           <a href="/loginpage.php">LOGIN</a>
+           <br>
+           <p>Back to  <a href="./loginpage.php">LOGIN</a></p>
+           <br>
        </div>
+     </div>
+    </div>
 
 
 

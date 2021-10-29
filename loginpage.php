@@ -99,7 +99,7 @@
                <div class="blank">blank</div>
                <div class="authen-header">KATA TOP VILLA</div>
                <div class="authen-login-subheader">LOGIN</div>
-             <form action="./dashboard.php" method="post">
+             <form action="./login.php" method="post">
 
 
               <div class="input-container">
@@ -108,7 +108,7 @@
               </div>
 
               <div class="input-container">
-                <input type="text" name="userid"  required=""/>
+                <input type="password" name="userid"  required=""/>
                 <label>PASSWORD</label>		
               </div>
 

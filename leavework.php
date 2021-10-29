@@ -14,7 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
-  <body class="background">
+  <body>
      
        <!-- Sidebar start -->
        <div class="sidebar">
@@ -273,7 +273,7 @@
             </table>
           </div>
       </div>
-      <div class="col-2" >
+      <div class="col-2" style="margin-left: 20px;" >
              <a href="./checkleave.php">
              <button class="btn btn-click"  style="background-color:LightGreen" >ตรวจสอบคำร้องขอลางาน<br>CHECK LEAVE WORK REOUESTS</button>
 

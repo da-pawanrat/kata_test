@@ -18,11 +18,14 @@
             $row = mysqli_fetch_array($result);
 
             $_SESSION['userid'] = $row['id'];
-            $_SESSION['user'] = $row['firstname']. " " . $row['lastname'];
+            $_SESSION['user'] = $row['firstname']. " " . $row['lastname']; 
             $_SESSION['userlevel'] = $row['userlevel'];
 
             if($_SESSION['userlevel' == 'a']){
                 header("Location: dashboard.php");
+            }
+            if($_SESSION['userlevel' == 's']){
+                header("Location: checkin.php");
             }
             if($_SESSION['userlevel' == 'm']){
                 header("Location: client.php");

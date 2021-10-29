@@ -239,7 +239,8 @@ body{
     left: 240px;
 }
 .home_content .container{
-    margin: 30px;
+    
+    margin: 20px 20px 0 120px;
     padding: 40px;
     text-align: center;
 }
@@ -454,6 +455,11 @@ body{
     border-radius: 12px;
     border: none;
 }
+.form-add .row .col-sm-4 .row .text{
+    padding: 6px;
+    border-radius: 12px;
+    border: none;
+}
 
 .index-header{
     text-align:left;
@@ -534,11 +540,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
 body{
-	background-image: url("https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-	background-position: center;
-    background-origin: content-box;
-    background-repeat: no-repeat;
-    background-size: cover;
+	
 	min-height:100vh;
 	font-family: 'Noto Sans', sans-serif;
 }

@@ -118,25 +118,25 @@
             
             <div class="body_dash">
               <div class="row">
-                <p>KATA VILLA HOTEL</p>
+                <p style="color: gray;">KATA VILLA HOTEL</p>
                 <div class="col-6" id="room_status_available">
                     <h3>2</h3>
                     <h6>AVAILABLE ROOMS</h6>
                 </div>
                 <div class="col-6" id="room_status_not_available">
                   <h3>2</h3>
-                  <h6>AVAILABLE ROOMS</h6>
+                  <h6>UNAVAILABLE ROOMS</h6>
               </div>
               </div>
               <div class="row">
-                <p>YOKA APARTMENT</p>
+                <p style="color: gray;">KATA YOKA APARTMENT</p>
                 <div class="col-6" id="room_status_available">
                     <h3>2</h3>
                     <h6>AVAILABLE ROOMS</h6>
                 </div>
                 <div class="col-6" id="room_status_not_available">
                   <h3>2</h3>
-                  <h6>AVAILABLE ROOMS</h6>
+                  <h6>UNAVAILABLE ROOMS</h6>
               </div>
               </div>
             </div>

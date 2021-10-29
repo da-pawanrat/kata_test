@@ -1,3 +1,64 @@
+<?php
+    session_start();
+    require_once "connection.php";
+
+    if (isset($_POST['submit'])){
+
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $idcard = $_POST['idcard'];
+        $birthday = $_POST['birthday'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $tel = $_POST['tel'];
+        $checkin = $_POST['checkin'];
+        $checkout = $_POST['checkout'];
+        $reserve = $_POST['reserve'];
+        $typestay = $_POST['typestay'];
+        $room = $_POST['room'];
+        $total = $_POST['total'];
+        $price = $_POST['price'];
+        $payment = $_POST['payment'];
+        $paystatus = $_POST['paystatus'];
+        $booking = $_POST['booking'];
+        $status = $_POST['status'];
+        $typehotel = $_POST['typehotel'];
+
+
+        $user_check = "SELECT * FROM customer_data WHERE cust_fname = '$firstname' LIMIT 1";
+        $result = mysqli_query($conn, $user_check);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user['username'] === $username){
+            echo "<script>alert('Username already exits');</script>";
+        } else {
+            $passwordenc = md5($password);
+
+            $query = "INSERT INTO `customer_data`(`type_of_hotel`, `type_of_stay`, `room_number`, 
+                        `cust_fname`, `cust_lname`, `cust_date`, `cust_tel`, `cust_email`, `cust_address`, 
+                        `checkin_date`, `checkout_date`, `total_guest`, `price`, `reser_date`, `count_pay_time`,
+                        `payment_status`, `booking_agent`, `status`) 
+                        VALUES ('$typehotel','$typestay','$room','$firstname','$lastname','$birthday',
+                        '$tel','$email','$address','$checkin','$checkout','$total','$price',
+                        '$reserve','$payment','$paystatus','$booking','$status')";
+            $result = mysqli_query($conn, $query);
+            
+            if ($result){
+                $_SESSION['success'] = "Insert user succesfully";
+                header("Location: client.php");
+            }else{
+                $_SESSION['error'] = "Something went wrong";
+                header("Location: client.php");
+            }
+        
+        }
+
+    }
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,12 +85,12 @@
                         <p>ADD CLIENT DATA -- เพิ่มข้อมูลลูกค้า</p>
                     </div>
                     <!-- Form edit client data to database -->
-                    <form action="./client.php" method="post">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <div class="row">
                     <div class="col-sm-3">
                         <div class="row">
-                        <label for="name">Name</label><br>
-                            <input type="text" name="name" id="name" class="text" placeholder="Name">
+                        <label for="name">Firstame</label><br>
+                            <input type="text" name="firstname" id="firstname" class="text" placeholder="Firstname">
                         </div>
                         <div class="row">
                         <label for="birthday">Date of birth</label><br>
@@ -50,6 +111,13 @@
                         <div class="row">
                         <label for="paystatus">Payment status</label><br>
                             <input type="text" name="paystatus" id="paystatuse" class="text" placeholder="Payment status">
+                        </div>
+                        <div class="row">
+                        <label for="typehotel">Type of Hotel</label><br>
+                            <select class="form-select text" aria-label="Default select example" id="typehotel" name="typehotel">
+                                <option value="katatopvilla" selected>Kata Top Villa</option>
+                                <option value="yokaapartment">Yoka Apartment</option>
+                            </select>
                         </div>
                         
                     </div>
@@ -80,7 +148,7 @@
                         </div>
                         <div class="row">
                         <label for="booking">Booking Agent</label><br>
-                            <select class="form-select text" aria-label="Default select example" id="booking" name="tbooking">
+                            <select class="form-select text" aria-label="Default select example" id="booking" name="booking">
                                 <option value="walkin" selected>Walk in</option>
                                 <option value="airbnb">Airbnb</option>
                                 <option value="agoda">Agoda</option>
@@ -129,10 +197,10 @@
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./client.php"><button type="button" id="next1" class="btn btn-primary">ADD</button></a>
+                                    <button type="submit" id="submit" class="btn btn-primary">ADD</button>
                                 </div>
                                 <div class="col-sm-3">
-                                <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>
+                                <a href="./client.php"><button type="button" id="back1" class="btn btn-danger" >CANCLE</button></a>
                                 </div>
                             </div>
                         <div class="col-sm-3"></div>
