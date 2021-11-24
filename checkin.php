@@ -209,6 +209,7 @@
                   <th>Date</th>
                   <th>Employee ID</th>
                   <th>Name</th>
+                  <th>Lastname</th>
                   <th>Time to work</th>
                   <th>Time off work</th>
                   <th>Leave work</th>
@@ -216,51 +217,27 @@
                 </tr>
               </thead>
               <tbody>
+                    <?php 
+                        include_once('connection.php');
+                        $fetchcheckin = new DB_con();
+                        $sql = $fetchcheckin ->fetchcheckindata();
+                       
+                        while($row=mysqli_fetch_array($sql)){?>
                 <tr>
-                  <td>25/06/2021</td>
-                  <td>1001</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>08.00</td>
-                  <td>18.00</td>
-                  <td></td>
-                  <td>-</td>
+                            <td><?php echo $row["date"] ?></td>
+                            <td><?php echo $row["emp_id"] ?></td>
+                            <td><?php echo $row["emp_fname"] ?></td>
+                            <td><?php echo $row["emp_lname"] ?></td>
+                            <td><?php echo $row["time_to_work"] ?></td>
+                            <td><?php echo $row["time_off_work"] ?></td>
+                            <td><?php echo $row["leave_workingday"] ?></td>
+                            <td><?php echo $row["remark"] ?></td>
+                  
                 </tr>
-                <tr>
-                  <td>25/06/2021</td>
-                  <td>1002</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>07.00</td>
-                  <td>17.00</td>
-                  <td></td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>25/06/2021</td>
-                  <td>1001</td>
-                  <td>Atimay Pengchai</td>
-                  <td>09.00</td>
-                  <td>19.00</td>
-                  <td></td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                <?php } ?> 
+                
+                
+                
               </tbody>
             </table>
           </div>
