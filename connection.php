@@ -154,6 +154,13 @@
                 WHERE `leave_numb`='$userid'" );
             return $result; 
         }
+
+        
+
+        public function fetchcheckindata(){
+            $result = mysqli_query($this->dbcon, "SELECT * FROM `checkin_leave_work`");
+            return $result; 
+        }
     }
 
 ?> 
