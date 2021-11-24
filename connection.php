@@ -155,7 +155,11 @@
             return $result; 
         }
 
-        
+        public function insertcheckin($no,$date,$id,$fname,$lname,$timeto,$timeoff,$leaveday,$remark){
+            $result = mysqli_query($this->dbcon, "INSERT INTO `checkin_leave_work`(`numid`, `date`, `emp_id`, `emp_fname`, `emp_lname`, `time_to_work`, `time_off_work`, `leave_workingday`, `remark`) 
+            VALUES ('$no','$date','$id','$fname','$lname','$timeto','$timeoff','$leaveday','$remark')" );
+            return $result;
+        }
 
         public function fetchcheckindata(){
             $result = mysqli_query($this->dbcon, "SELECT * FROM `checkin_leave_work`");
