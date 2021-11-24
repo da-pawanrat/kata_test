@@ -220,9 +220,11 @@
                     <?php 
                         include_once('connection.php');
                         $fetchcheckin = new DB_con();
-                        $sql = $fetchcheckin ->fetchcheckindata();
+                        $fetchcheckout = new DB_con();
+                        $sql_checkin = $fetchcheckin ->fetchcheckindata();
+                        $sql_checkout = $fetchcheckout ->fetchcheckoutdata();
                        
-                        while($row=mysqli_fetch_array($sql)){?>
+                        while($row=mysqli_fetch_array($sql_checkin)){?>
                 <tr>
                             <td><?php echo $row["date"] ?></td>
                             <td><?php echo $row["emp_id"] ?></td>
@@ -234,10 +236,8 @@
                             <td><?php echo $row["remark"] ?></td>
                   
                 </tr>
-                <?php } ?> 
-                
-                
-                
+                <?php } ?>
+
               </tbody>
             </table>
           </div>
