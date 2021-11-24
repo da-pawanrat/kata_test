@@ -161,8 +161,19 @@
             return $result;
         }
 
+        public function insertcheckout($no,$date,$id,$fname,$lname,$timeto,$timeoff,$leaveday,$remark){
+            $result = mysqli_query($this->dbcon, "INSERT INTO `checkout_leave_work`(`numid`, `date`, `emp_id`, `emp_fname`, `emp_lname`, `time_off_work`, `leave_workingday`, `remark`) 
+            VALUES ('$no','$date','$id','$fname','$lname','$timeoff','$leaveday','$remark')" );
+            return $result;
+        }
+
         public function fetchcheckindata(){
             $result = mysqli_query($this->dbcon, "SELECT * FROM `checkin_leave_work`");
+            return $result; 
+        }
+
+        public function fetchcheckoutdata(){
+            $result = mysqli_query($this->dbcon, "SELECT * FROM `checkout_leave_work`");
             return $result; 
         }
     }
