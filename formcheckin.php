@@ -1,3 +1,35 @@
+<?php
+    session_start();
+    require_once "connection.php";
+
+    $insertcheckin = new DB_con();
+
+    if (isset($_POST['submit'])){
+
+        $no = $_POST['no'];
+        $date = $_POST['date'];
+        $id = $_POST['id'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $timeto = $_POST['time'];
+        $timeoff = $_POST['timeoff'];
+        $leaveday = $_POST['leaveday'];
+        $remark = $_POST['remark'];
+        
+
+        $sql = $insertcheckin->insertcheckin($no,$date,$id,$fname,$lname,$timeto,
+                                                $timeoff,$leaveday,$remark);
+
+        if($sql){
+            echo "<script>alert('Record Inserted Successfully!');</script>";
+            echo "<script>window.location.href='./checkin.php'</script>";
+        }else{
+            echo "<script>alert('Something went wrong! Please try again!');</script>";
+            echo "<script>window.location.href='./formcheckin.php'</script>";
+        }
+
+    }
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,10 +51,10 @@
 <body>
     <div class="form-page"><br>
         <div class="headname" style="margin-left:8px">
-        <h3>KATA TOP VILLA</h3>
+            <h3>KATA TOP VILLA</h3>
 
         </div>
-        
+
         <section>
             <div class="container">
                 <div class="form-add" style="width: 680px;">
@@ -41,8 +73,8 @@
 
                                 </div>
                                 <div class="row">
-                                    <label for="name">Name</label><br>
-                                    <input class="form-control" type="text" placeholder="name" name="name" id="name">
+                                    <label for="fname">Name</label><br>
+                                    <input class="form-control" type="text" placeholder="name" name="fname" id="fname">
 
                                 </div>
 
@@ -55,9 +87,9 @@
                             <div class="col-sm-5" style="margin-top:70px">
 
                                 <div class="row">
-                                    <label for="lastname">Lastname</label><br>
-                                    <input class="form-control" type="text" placeholder="lastname" name="lastname"
-                                        id="lastname">
+                                    <label for="lname">Lastname</label><br>
+                                    <input class="form-control" type="text" placeholder="lastname" name="lname"
+                                        id="lname">
 
                                 </div>
 
@@ -71,11 +103,11 @@
                         <div class="row text-center mt-3">
 
                             <div class="col-sm-3" style="margin-top: 10px;margin-left:150px">
-                                <a><button type="button" id="next1" class="btn btn-success">CHECK
-                                        IN</button></a>
+                                <button type="submit" id="submit" name="submit" class="btn btn-success">CHECK
+                                        IN</button>
                             </div>
                             <div class="col-sm-3" style="margin-top: 10px">
-                                <button type="button" id="back1" class="btn btn-danger">BACK</button>
+                            <a href="./checkin.php"><button type="button" id="back1" class="btn btn-danger">BACK</button></a>
                             </div>
                         </div>
                         <div class="col-sm-3"></div>
