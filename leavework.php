@@ -199,13 +199,10 @@
         <div class="client-table"> 
             <div class="row">
               <div class="col-3 header-table">
-                <p>Leave working day data table</p>
+                <p>Leave working day table</p>
               </div>
               <div class="col-2 header-btn">
                 <a class="btn btn-add-a" href="./formadd_leave.php" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="./formedit_leave.php" role="button">แก้ไขข้อมูล</a>
               </div>
             </div>
         <!-- Client data details -->
@@ -214,77 +211,49 @@
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Employee ID</th>
+                  <th>No.</th>
                   <th>Name</th>
                   <th>Date</th>
-                  <th>Summaty Day</th>
+                  <th>Summary Day</th>
                   <th>Leave type</th>
                   <th>Remark</th>
+                  <th></th>
                   
                 </tr>
               </thead>
               <tbody>
+              <?php
+                  include_once('connection.php');
+                  $fetchleave =  new DB_con();
+                  $sql = $fetchleave->fetchleavedata();
+                  $no = 1;
+                  while($row = mysqli_fetch_array($sql)){
+                ?>
+
                 <tr>
-                  
-                  <td>1001</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>03/01/21 - 04/01/21</td>
-                  <td>1</td>
-                  <td>Sick leave</td>
-                  <td>-</td>
+                  <td><?php echo $row['leave_numb']; ?></td>
+                  <td><?php echo $row['emp_fname'].' '.$row['emp_lname']; ?></td>
+                  <td><?php echo $row['begin_date'].' - '.$row['due_date']; ?></td>
+                  <td><?php echo $row['summarry']; ?></td>
+                  <td><?php echo $row['type_leave']; ?></td>
+                  <td><?php echo $row['remark']; ?></td>
+                  <td><a href="./formedit_leave.php?leave_numb=<?php echo $row['leave_numb']; ?>" style="color: black;"><i class='bx bxs-edit-alt' style="font-size: 22px;"></i></a></td>
                 </tr>
-                <tr>
-                  
-                  <td>1002</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>17/01/21 - 19/01/21</td>
-                  <td>3</td>
-                  <td>Personal leave</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  
-                  <td>1007</td>
-                  <td>Atimay Pengchai</td>
-                  <td>20/01/21 - 28/01/21</td>
-                  <td>7</td>
-                  <td>Vacation leave</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+
+                <?php
+                }
+                ?>
               </tbody>
             </table>
           </div>
       </div>
-      <div class="col-2" style="margin-left: 20px;" >
-             <a href="./checkleave.php">
-             <button class="btn btn-click"  style="background-color:LightGreen" >ตรวจสอบคำร้องขอลางาน<br>CHECK LEAVE WORK REOUESTS</button>
-
-             </a>
-          
-
+          <div class="col-2" style="margin-left: 20px;" >
+             <a href="./checkleave.php"><button class="btn btn-click"  style="background-color:LightGreen" >ตรวจสอบคำร้องขอลางาน<br>CHECK LEAVE WORK REOUESTS</button></a>
           </div> 
 
 
-         </div> 
-       </div>
+    </div> 
+  </div>
 
 
 
@@ -296,6 +265,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/index.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

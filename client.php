@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -186,20 +188,18 @@
         <!-- Client data details -->
         <div class="client-table"> 
             <div class="row">
-              <div class="col-3 header-table">
+              <div class="col-2 header-table">
                 <p>KATA TOP VILLA</p>
               </div>
               <div class="col-2 header-btn">
                 <a class="btn btn-add" href="./formadd_client.php" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="./formedit_client.php" role="button">แก้ไขข้อมูล</a>
               </div>
             </div>
               
             <table class="table table-hover">
               <thead>
                 <tr>
+                  <th>No.</th>
                   <th>Type of Stay</th>
                   <th>Room Number</th>
                   <th>ID card / Passport</th>
@@ -214,57 +214,42 @@
                   <th>Payment status</th>
                   <th>Booking agent</th>
                   <th>Status</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
+
+              <?php
+                include_once('connection.php');
+                $fetchclientdata =  new DB_con();
+                $sql = $fetchclientdata->fetchclientdata();
+                while($row = mysqli_fetch_array($sql)){
+
+                ?>
+
                 <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
+                  <td><?php echo $row['cust_id']; ?></td>
+                  <td><?php echo $row['type_of_stay']; ?></td>
+                  <td><?php echo $row['room_number']; ?></td>
+                  <td><?php echo $row['idcard']; ?></td>
+                  <td><?php echo $row['cust_fname'].' '.$row['cust_lname']; ?></td>
+                  <td><?php echo $row['total_guest']; ?></td>
+                  <td><?php echo $row['checkin_date']; ?></td>
+                  <td><?php echo $row['checkout_date']; ?></td>
+                  <td><?php echo $row['price']; ?></td>
+                  <td><?php echo $row['cust_tel']; ?></td>
+                  <td><?php echo $row['reser_date']; ?></td>
+                  <td><?php echo $row['count_pay_time']; ?></td>
+                  <td><?php echo $row['payment_status']; ?></td>
+                  <td><?php echo $row['booking_agent']; ?></td>
+                  <td><?php echo $row['status']; ?></td>
+                  <td><a href="./formedit_client.php?cust_id=<?php echo $row['cust_id']; ?>" style="color: black;"><i class='bx bxs-edit-alt' style="font-size: 22px;"></i></a></td>
                 </tr>
-                <tr>
-                  <td>Monthly</td>
-                  <td>2L</td>
-                  <td>10063578954265</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>1</td>
-                  <td>12/03/2021</td>
-                  <td>15/05/2021</td>
-                  <td>17000</td>
-                  <td>0995688875</td>
-                  <td>09/02/2021</td>
-                  <td></td>
-                  <td>Pay 100%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Daily</td>
-                  <td>1L</td>
-                  <td>10063578954265</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>1</td>
-                  <td>12/05/2021</td>
-                  <td>15/05/2021</td>
-                  <td>1200</td>
-                  <td>0995688875</td>
-                  <td>09/05/2021</td>
-                  <td></td>
-                  <td>Pay 50%</td>
-                  <td>airnbn</td>
-                  <td>active</td>
-                </tr>
+
+                <?php
+                }
+                ?>
+
               </tbody>
             </table>
           </div>
@@ -282,6 +267,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -154,9 +154,6 @@
               <div class="col-2 header-btn">
                 <a class="btn btn-add-a" href="./formadd_employee.php" role="button">เพิ่มข้อมูล</a>
               </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="./formedit_employee.php" role="button">แก้ไขข้อมูล</a>
-              </div>
             </div>
               
             <table class="table table-hover">
@@ -171,64 +168,34 @@
                   <th>Telephone</th>
                   <th>Address</th>
                   <th>Bank Acoount number</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
+                <?php
+                  include_once('connection.php');
+                  $fetchemployee =  new DB_con();
+                  $sql = $fetchemployee->fetchemployeedata();
+                  $no = 1;
+                  while($row = mysqli_fetch_array($sql)){
+                ?>
+
                 <tr>
-                  <td>1001</td>
-                  <td>110025634000111</td>
-                  <td>Staff</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>12/05/2021</td>
-                  <td>pawanrat@gmail.com</td>
-                  <td>0995688875</td>
-                  <td>Phuket,Thailand</td>
-                  <td>1234567890</td>
+                  <td><?php echo $row['emp_id']; ?></td>
+                  <td><?php echo $row['emp_idcard']; ?></td>
+                  <td><?php echo $row['position']; ?></td>
+                  <td><?php echo $row['emp_name'].' '.$row['emp_lastname']; ?></td>
+                  <td><?php echo $row['emp_date_of_birth']; ?></td>
+                  <td><?php echo $row['emp_email']; ?></td>
+                  <td><?php echo $row['emp_tel']; ?></td>
+                  <td><?php echo $row['emp_address']; ?></td>
+                  <td><?php echo $row['emp_bank_name'].' '.$row['emp_bank_number']; ?></td>
+                  <td><a href="./formedit_employee.php?emp_id=<?php echo $row['emp_id']; ?>" style="color: black;"><i class='bx bxs-edit-alt' style="font-size: 22px;"></i></a></td>
                 </tr>
-                <tr>
-                  <td>1003</td>
-                  <td>11002563665896</td>
-                  <td>Maid</td>
-                  <td>Atimay Pengchai</td>
-                  <td>01/01/2011</td>
-                  <td>atimayt@gmail.com</td>
-                  <td>0992222275</td>
-                  <td>Phuket,Thailand</td>
-                  <td>5896542765</td>
-                </tr>
-                <tr>
-                  <td>1004</td>
-                  <td>116986354000111</td>
-                  <td>Staff</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>03/12/2002</td>
-                  <td>tagolwan@gmail.com</td>
-                  <td>0995600000</td>
-                  <td>Songkla,Thailand</td>
-                  <td>5369865421</td>
-                </tr>
-                <tr>
-                  <td>1009</td>
-                  <td>110025634000111</td>
-                  <td>Staff</td>
-                  <td>daada</td>
-                  <td>30/03/1999</td>
-                  <td>daada@gmail.com</td>
-                  <td>0990000000</td>
-                  <td>Phuket,Thailand</td>
-                  <td>9876543210</td>
-                </tr>
-                <tr>
-                  <td>1011</td>
-                  <td>110025634000111</td>
-                  <td>Maid</td>
-                  <td>Ying</td>
-                  <td>27/05/1989</td>
-                  <td>ying@gmail.com</td>
-                  <td>0999999999</td>
-                  <td>Phuket,Thailand</td>
-                  <td>1234567890</td>
-                </tr>
+
+                <?php
+                }
+                ?>
               </tbody>
             </table>
           </div>
@@ -247,6 +214,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/index.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

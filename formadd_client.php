@@ -2,6 +2,8 @@
     session_start();
     require_once "connection.php";
 
+    $insertclient = new DB_con();
+
     if (isset($_POST['submit'])){
 
         $firstname = $_POST['firstname'];
@@ -24,33 +26,16 @@
         $status = $_POST['status'];
         $typehotel = $_POST['typehotel'];
 
+        $sql = $insertclient->insertclient($typehotel,$typestay,$room,$firstname,$lastname,$birthday,
+        $tel,$email,$address,$checkin,$checkout,$total,$price,
+        $reserve,$payment,$paystatus,$booking,$status,$idcard);
 
-        $user_check = "SELECT * FROM customer_data WHERE cust_fname = '$firstname' LIMIT 1";
-        $result = mysqli_query($conn, $user_check);
-        $user = mysqli_fetch_assoc($result);
-
-        if ($user['username'] === $username){
-            echo "<script>alert('Username already exits');</script>";
-        } else {
-            $passwordenc = md5($password);
-
-            $query = "INSERT INTO `customer_data`(`type_of_hotel`, `type_of_stay`, `room_number`, 
-                        `cust_fname`, `cust_lname`, `cust_date`, `cust_tel`, `cust_email`, `cust_address`, 
-                        `checkin_date`, `checkout_date`, `total_guest`, `price`, `reser_date`, `count_pay_time`,
-                        `payment_status`, `booking_agent`, `status`) 
-                        VALUES ('$typehotel','$typestay','$room','$firstname','$lastname','$birthday',
-                        '$tel','$email','$address','$checkin','$checkout','$total','$price',
-                        '$reserve','$payment','$paystatus','$booking','$status')";
-            $result = mysqli_query($conn, $query);
-            
-            if ($result){
-                $_SESSION['success'] = "Insert user succesfully";
-                header("Location: client.php");
-            }else{
-                $_SESSION['error'] = "Something went wrong";
-                header("Location: client.php");
-            }
-        
+        if($sql){
+            echo "<script>alert('Record Inserted Successfully!');</script>";
+            echo "<script>window.location.href='./client.php'</script>";
+        }else{
+            echo "<script>alert('Something went wrong! Please try again!');</script>";
+            echo "<script>window.location.href='./formadd_client.php'</script>";
         }
 
     }
@@ -85,7 +70,7 @@
                         <p>ADD CLIENT DATA -- เพิ่มข้อมูลลูกค้า</p>
                     </div>
                     <!-- Form edit client data to database -->
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <form action="" method="post">
                     <div class="row">
                     <div class="col-sm-3">
                         <div class="row">
@@ -197,7 +182,7 @@
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <button type="submit" id="submit" class="btn btn-primary">ADD</button>
+                                    <button type="submit" name="submit" id="submit" class="btn btn-primary">ADD</button>
                                 </div>
                                 <div class="col-sm-3">
                                 <a href="./client.php"><button type="button" id="back1" class="btn btn-danger" >CANCLE</button></a>

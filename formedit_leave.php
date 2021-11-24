@@ -1,3 +1,34 @@
+<?php
+    session_start();
+    require_once "connection.php";
+
+    $updateleave = new DB_con();
+
+    if (isset($_POST['submit'])){
+        $userid = $_GET['leave_numb'];
+        $firstname = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $begin = $_POST['begin'];
+        $due = $_POST['due'];
+        $summary = $_POST['sum'];
+        $type = $_POST['type'];
+        $remark = $_POST['remark'];
+
+        $sql = $updateleave->updateleave($firstname,$lastname,$begin,$due,$summary,$type,$remark,$userid);
+
+        if($sql){
+            echo "<script>alert('Record Inserted Successfully!');</script>";
+            echo "<script>window.location.href='./leavework.php'</script>";
+        }else{
+            echo "<script>alert('Something went wrong! Please try again!');</script>";
+            echo "<script>window.location.href='./formedit_leave.php'</script>";
+        }
+
+    }
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,57 +54,86 @@
                     <div class="header-form">
                         <p>EDIT LEAVE WORK DATA -- แก้ไขข้อมูลการลางาน</p>
                     </div>
-                    <!-- Form edit client data to database -->
-                    <form action="./client.php" method="post">
+
+                    <?php
+
+                        $userid = $_GET['leave_numb'];
+                        $updateleave = new DB_con();
+                        $sql = $updateleave->fetchleaveonerecord($userid);
+                        while($row = mysqli_fetch_array($sql)){
+
+                    ?>
+
+                    <!-- Form edit leave data to database -->
+                    <form action="" method="post">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="row">
                             <label for="name">Name</label><br>
-                                <input type="text" name="name" id="name" class="text" placeholder="Name">
+                                <input type="text" name="name" id="name" class="text" 
+                                value="<?php echo $row['emp_fname']; ?>"
+                                placeholder="Name">
                             </div>
                             <div class="row">
                             <label for="begin">Begin date</label><br>
-                                <input type="date" name="begin" id="begin" class="text" placeholder="Begin date">
+                                <input type="date" name="begin" id="begin" class="text" 
+                                value="<?php echo $row['begin_date']; ?>"
+                                placeholder="Begin date">
                             </div>
                             <div class="row">
                             <label for="sum">Summary</label><br>
-                                <input type="text" name="sum" id="sum" class="text" placeholder="Summary">
+                                <input type="text" name="sum" id="sum" class="text" 
+                                value="<?php echo $row['summarry']; ?>"
+                                placeholder="Summary">
+                            </div>
+                            <div class="row">
+                            <label for="remark">Remark</label><br>
+                                <input type="text" name="remark" id="remark" class="text" 
+                                value="<?php echo $row['remark']; ?>"
+                                placeholder="Remark">
                             </div>
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4">
                             <div class="row">
                             <label for="lastname">Lastname</label><br>
-                                <input type="text" name="lastname" id="lastname" class="text" placeholder="Lastname">
+                                <input type="text" name="lastname" id="lastname" class="text" 
+                                value="<?php echo $row['emp_lname']; ?>"
+                                placeholder="Lastname">
                             </div>
                             <div class="row">
                             <label for="due">Due date</label><br>
-                                <input type="date" name="due" id="due" class="text" placeholder="Due date">
+                                <input type="date" name="due" id="due" class="text" 
+                                value="<?php echo $row['due_date']; ?>"
+                                placeholder="Due date">
                             </div>
                             <div class="row">
                                 <label for="type">Type</label><br>
                                 <select class="form-select text" aria-label="Default select example" id="type" name="type">
-                                <option  selected></option>
-                                <option value="sickleave">Sick leave</option>
-                                <option value="personalleave">Personal leave</option>
-                                <option value="vacationleave">Vacation leave</option>
+                                <option value="<?php echo $row['type_leave']; ?>" selected><?php echo $row['type_leave']; ?></option>
+                                <option value="sick leave">Sick leave</option>
+                                <option value="personal leave">Personal leave</option>
+                                <option value="vacation leave">Vacation leave</option>
                             </select>
                             </div>
                         </div>
                     </div>
-
+                    
+                    <?php
+                        }
+                    ?>
 
                     <div class="row text-center mt-5">
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./leavework.php"><button type="button" id="next1" class="btn btn-success">COMFIRM</button></a>
+                                    <button type="submit" name="submit" class="btn btn-success">CONFIRM</button>
                                 </div>
                                 <div class="col-sm-3">
-                                <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>
+                                    <a href="./leavework.php"><button type="button" class="btn btn-danger" >CANCLE</button></a>
                                 </div>
-                            </div>
-                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="col-sm-3"></div>
                     </form>
 
                     

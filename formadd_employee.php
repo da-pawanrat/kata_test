@@ -1,3 +1,46 @@
+<?php
+    session_start();
+    require_once "connection.php";
+
+    $insertemployee = new DB_con();
+
+    if (isset($_POST['submit'])){
+
+        $firstname = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $idcard = $_POST['idcard'];
+        $birthday = $_POST['birthday'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $tel = $_POST['tel'];
+        $position = $_POST['position'];
+        $type = $_POST['type'];
+        $bank = $_POST['bank'];
+        $account = $_POST['account'];
+        $salary = $_POST['salary'];
+        $borrow = $_POST['bmoney'];
+        $deposit = $_POST['deposit'];
+        $ssp = $_POST['ssp'];
+        $fcost = $_POST['fcost'];
+        $advance = $_POST['advance'];
+        $status = $_POST['status'];
+        
+
+        $sql = $insertemployee->insertemployee($firstname,$lastname,$idcard,$birthday,$email,$address,
+                                                $tel,$position,$type,$bank,$account,$salary,$borrow,$deposit,
+                                                $ssp,$fcost,$advance,$status);
+
+        if($sql){
+            echo "<script>alert('Record Inserted Successfully!');</script>";
+            echo "<script>window.location.href='./employee.php'</script>";
+        }else{
+            echo "<script>alert('Something went wrong! Please try again!');</script>";
+            echo "<script>window.location.href='./formadd_employee.php'</script>";
+        }
+
+    }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,7 +67,7 @@
                         <p>ADD EMPLOYEE DATA -- เพิ่มข้อมูลพนักงาน</p>
                     </div>
                     <!-- Form edit client data to database -->
-                    <form action="./client.php" method="post">
+                    <form action="" method="post">
                     <div class="row">
                     <div class="col-sm-3">
                         <div class="row">
@@ -48,8 +91,8 @@
                             <input type="text" name="bmoney" id="bmoney" class="text" placeholder="Borrow money">
                         </div>
                         <div class="row">
-                        <label for="paystatus">Payment status</label><br>
-                            <input type="text" name="paystatus" id="paystatuse" class="text" placeholder="Payment status">
+                        <label for="fcost">Facility cost</label><br>
+                            <input type="text" name="fcost" id="fcost" class="text" placeholder="facility cost">
                         </div>
                         
                     </div>
@@ -77,13 +120,14 @@
                             <input type="text" name="account" id="account" class="text" placeholder="Bank Account Number">
                         </div>
                         <div class="row">
-                        <label for="price">Price</label><br>
-                            <input type="text" name="price" id="price" class="text" placeholder="Price">
+                        <label for="deposit">Contract deposit</label><br>
+                            <input type="text" name="deposit" id="deposit" class="text" placeholder="Contract deposit">
                         </div>
                         <div class="row">
-                        <label for="fcost">Facility cost</label><br>
-                            <input type="text" name="cost" id="cost" class="text" placeholder="acility cost">
+                        <label for="advance">Advance salary</label><br>
+                            <input type="text" name="advance" id="advance" class="text" placeholder="Advance salary">
                         </div>
+                           
                     </div>
                     <div class="col-1"></div>
                     <div class="col-sm-3">
@@ -96,29 +140,48 @@
                             <input type="text" name="address" id="address" class="text" placeholder="Address">
                         </div>
                         <div class="row">
-                        <label for="file">Labor contract</label><br>
-                            <input type="file" id="file" class="text" name="file" accept=".pdf,.doc"/>
+                        <label for="position">Position</label><br>
+                            <select class="form-select text" aria-label="Default select example" id="position" name="position">
+                                <option value="Staff" selected>Staff</option>
+                                <option value="Maid">Maid</option>
+                            </select>
                         </div>
                         <div class="row">
                         <label for="salary">Salary(BATH)</label><br>
                             <input type="text" name="salary" id="salary" class="text" placeholder="Salary">
                         </div>
                         <div class="row">
-                        <label for="ssp">Social security payment</label><br>
+                        <label for="ssp">SSP</label><br>
                             <input type="text" name="ssp" id="ssp" class="text" placeholder="Social security payment">
                         </div>
+                        <div class="row">
+                        <label for="status">Status</label><br>
+                            <select class="form-select text" aria-label="Default select example" id="status" name="status">
+                                <option value="Active" selected>Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                        </div> 
                         
                     </div>
+                    <div class="row">
+                    <label for="file">Labor contract</label><br>
+                                <div class="col-sm-5 input-group">      
+                                <div class="custom-file"> 
+                                    <input type="file" class="custom-file-input" name="file" id="inputGroupFile02" accept=".pdf,.doc"/>
+                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                                </div>
+                        </div>
                     </div>
 
                     <div class="row text-center mt-3">
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./employee.php"><button type="button" id="next1" class="btn btn-primary">ADD</button></a>
+                                    <button type="submit" name="submit" class="btn btn-primary">ADD</button>
                                 </div>
                                 <div class="col-sm-3">
-                                <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>
+                                <a href="./employee.php"><button type="button" class="btn btn-danger" >CANCLE</button></a>           
                                 </div>
                             </div>
                         <div class="col-sm-3"></div>

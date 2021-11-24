@@ -157,6 +157,22 @@
                   <label>LASTNAME</label>		
                 </div>
 
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="a">
+                  <label class="form-check-label" for="admin">Admin</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="s">
+                  <label class="form-check-label" for="staff">Staff</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="m">
+                  <label class="form-check-label" for="maid">Maid</label>
+                </div>
+                
+                
+
                 <div class="blank">blank</div>   <div class="blank">blank</div>
 
                   <!-- 

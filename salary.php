@@ -208,7 +208,7 @@
             <table class="table table-hover">
               <thead>
                 <tr>
-                    <th>No.</th>
+                  <th>No.</th>
                   <th>Position</th>
                   <th>Name</th>
                   <th>Salary</th>
@@ -223,49 +223,33 @@
                 </tr>
               </thead>
               <tbody>
+
+              <?php
+                  include_once('connection.php');
+                  $fetchemployee =  new DB_con();
+                  $sql = $fetchemployee->fetchsalarydata();
+                  $no = 1;
+                  while($row = mysqli_fetch_array($sql)){
+                ?>
+
                 <tr>
-                  <td>1</td>
-                  <td>Staff</td>
-                  <td>Tagolwan Keawmanee</td>
-                  <td>10500</td>
-                  <td>500</td>
-                  <td>500</td>
-                  <td>1500</td>
-                  <td>-</td>
-                  <td>500</td>
-                  <td>7500</td>
-                  <td>KTB1020135678</td>
-                  <td>-</td>
+                  <td><?php echo $row['emp_id']; ?></td>
+                  <td><?php echo $row['position']; ?></td>
+                  <td><?php echo $row['emp_name'].' '.$row['emp_lastname']; ?></td>
+                  <td><?php echo $row['salary']; ?></td>
+                  <td><?php echo $row['ssp']; ?></td>
+                  <td><?php echo $row['borrow']; ?></td>
+                  <td><?php echo $row['fcost']; ?></td>
+                  <td><?php echo $row['advance']; ?></td>
+                  <td><?php echo $row['deposit']; ?></td>
+                  <td><?php echo $row['salary']-($row['ssp']+$row['borrow']+$row['fcost']+$row['advance']+$row['deposit']); ?></td>
+                  <td><?php echo $row['emp_bank_name'].' '.$row['emp_bank_number']; ?></td>
                 </tr>
-                <tr>
-                  
-                  <td>2</td>
-                  <td>Staff</td>
-                  <td>Pawanrat Sangmuang</td>
-                  <td>13500</td>
-                  <td>500</td>
-                  <td></td>
-                  <td>1500</td>
-                  <td>-</td>
-                  <td>1000</td>
-                  <td>10000</td>
-                  <td>KTB1023654780</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Maid</td>
-                  <td>Atimay Pengchai</td>
-                  <td>14000</td>
-                  <td>500</td>
-                  <td></td>
-                  <td>1500</td>
-                  <td>-</td>
-                  <td></td>
-                  <td>13500</td>
-                  <td>KTB1234567890</td>
-                  <td>-</td>
-                </tr>
+
+                <?php
+                }
+                ?>
+
                 <tr>
                   <td></td>
                   <td></td>
@@ -280,35 +264,7 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
+                <tr style="color: red;">
                   <td></td>
                   <td></td>
                   <td>Total</td>

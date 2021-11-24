@@ -198,16 +198,8 @@
 
         <!-- Client data details -->
         <div class="client-table"> 
-            <div class="row">
-              <div class="col-2 header-btn">
-                <a class="btn btn-add" href="#" role="button">เพิ่มข้อมูล</a>
-              </div>
-              <div class="col-2 header-btn">
-                <a class="btn btn-edit" href="#" role="button">แก้ไขข้อมูล</a>
-              </div>
-            </div>
-              
-            <table class="table table-hover">
+        
+            <table class="table table-hover mt-3">
               <thead>
                 <tr>
                   <th>ID</th>

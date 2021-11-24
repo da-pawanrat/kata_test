@@ -1,3 +1,33 @@
+<?php
+    session_start();
+    require_once "connection.php";
+
+    $insertleave = new DB_con();
+
+    if (isset($_POST['submit'])){
+
+        $firstname = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $begin = $_POST['begin'];
+        $due = $_POST['due'];
+        $summary = $_POST['sum'];
+        $type = $_POST['type'];
+        $remark = $_POST['remark'];
+
+        $sql = $insertleave->insertleave($firstname,$lastname,$begin,$due,$summary,$type,$remark);
+
+        if($sql){
+            echo "<script>alert('Record Inserted Successfully!');</script>";
+            echo "<script>window.location.href='./leavework.php'</script>";
+        }else{
+            echo "<script>alert('Something went wrong! Please try again!');</script>";
+            echo "<script>window.location.href='./formadd_leave.php'</script>";
+        }
+
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,7 +54,7 @@
                         <p>ADD LEAVE WORK DATA -- เพิ่มข้อมูลการลางาน</p>
                     </div>
                     <!-- Form edit client data to database -->
-                    <form action="./client.php" method="post">
+                    <form action="" method="post">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="row">
@@ -38,6 +68,10 @@
                             <div class="row">
                             <label for="sum">Summary</label><br>
                                 <input type="text" name="sum" id="sum" class="text" placeholder="Summary">
+                            </div>
+                            <div class="row">
+                            <label for="remark">Remark</label><br>
+                                <input type="text" name="remark" id="remark" class="text" placeholder="Remark">
                             </div>
                         </div>
                         <div class="col-sm-2"></div>
@@ -53,10 +87,9 @@
                             <div class="row">
                                 <label for="type">Type</label><br>
                                 <select class="form-select text" aria-label="Default select example" id="type" name="type">
-                                <option  selected></option>
-                                <option value="sickleave">Sick leave</option>
-                                <option value="personalleave">Personal leave</option>
-                                <option value="vacationleave">Vacation leave</option>
+                                <option value="sick leave" selected>Sick leave</option>
+                                <option value="personal leave">Personal leave</option>
+                                <option value="vacation leave">Vacation leave</option>
                             </select>
                             </div>
                         </div>
@@ -67,10 +100,10 @@
                         <div class="col-sm-3"></div>
                         
                                 <div class="col-sm-3">
-                                    <a href="./leavework.php"><button type="button" id="next1" class="btn btn-success">COMFIRM</button></a>
+                                    <button type="submit" name="submit" class="btn btn-primary">ADD</button>
                                 </div>
                                 <div class="col-sm-3">
-                                <button type="button" id="back1" class="btn btn-danger" >CANCLE</button>
+                                <a href="./leavework.php"><button type="button" class="btn btn-danger" >CANCLE</button></a>
                                 </div>
                             </div>
                         <div class="col-sm-3"></div>

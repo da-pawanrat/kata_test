@@ -374,7 +374,6 @@ body{
     background-color: rgb(224, 226, 228);
 }
 .background{
-
     background-image:url("../images/background.jpg");
   /* Full height */
   height: 100%;
@@ -386,7 +385,7 @@ body{
 }
 
 .home_content .login{
-    width: 100%;
+    
     text-align: center;   
     background-color: rgb(224, 226, 228,0.7);
 }
@@ -411,6 +410,11 @@ body{
 .client-table .table-hover tbody tr td{
     font-size: 13px;
     font-weight: 500;
+    text-align: center;
+}
+.client-table .table-hover tbody tr td .bxs-edit-alt{
+    color: black;
+    font-size: 20px;
     text-align: center;
 }
 .form-page{
@@ -505,7 +509,7 @@ body{
 }
 
 .login-content{
-    margin-top: 8%;
+    margin-top: 16px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -539,8 +543,7 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
-body{
-	
+body{	
 	min-height:100vh;
 	font-family: 'Noto Sans', sans-serif;
 }
