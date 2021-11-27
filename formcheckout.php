@@ -11,21 +11,19 @@
         $id = $_POST['id'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
-        $timeto = $_POST['time'];
-        $timeoff = $_POST['time'];
-        $leaveday = $_POST['leaveday'];
-        $remark = $_POST['remark'];
+        $timeoff = $_POST['timeoff'];
+        
         
 
-        $sql_checkout = $insertcheckout->insertcheckout($no,$date,$id,$fname,$lname,$timeto,
-                                                $time,$leaveday,$remark);
+        $sql = $insertcheckout->insertcheckout($no,$date,$id,$fname,$lname,
+                                                $timeoff);
 
-        if($sql_checkout){
+        if($sql){
             echo "<script>alert('Record Inserted Successfully!');</script>";
             echo "<script>window.location.href='./checkin.php'</script>";
         }else{
             echo "<script>alert('Something went wrong! Please try again!');</script>";
-            echo "<script>window.location.href='./formcheckin.php'</script>";
+            echo "<script>window.location.href='./formcheckout.php'</script>";
         }
 
     }
@@ -95,7 +93,7 @@
 
                                 <div class="row">
                                     <label for="time">Time</label><br>
-                                    <input type="time" name="time" id="time" class="form-control">
+                                    <input type="time" name="timeoff" id="timeoff" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -103,7 +101,8 @@
                         <div class="row text-center mt-3">
 
                             <div class="col-sm-3" style="margin-top: 10px;margin-left:150px">
-                                <button type="submit" id="submit" name="submit" class="btn btn-success">CHECK OUT</button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-success">CHECK
+                                        OUT</button>
                             </div>
                             <div class="col-sm-3" style="margin-top: 10px">
                             <a href="./checkin.php"><button type="button" id="back1" class="btn btn-danger">BACK</button></a>

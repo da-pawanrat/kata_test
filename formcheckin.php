@@ -12,15 +12,13 @@
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $timeto = $_POST['time'];
-        $timeoff = $_POST['time'];
-        $leaveday = $_POST['leaveday'];
-        $remark = $_POST['remark'];
+        
         
 
-        $sql_checkin = $insertcheckin->insertcheckin($no,$date,$id,$fname,$lname,$timeto,
+        $sql = $insertcheckin->insertcheckin($no,$date,$id,$fname,$lname,$timeto,
                                                 $timeoff,$leaveday,$remark);
 
-        if($sql_checkin){
+        if($sql){
             echo "<script>alert('Record Inserted Successfully!');</script>";
             echo "<script>window.location.href='./checkin.php'</script>";
         }else{

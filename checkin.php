@@ -196,11 +196,19 @@
             </div>
         </div>
 
+        
+
         <!-- Client data details -->
         <div class="client-table">
           <div class="row">
           <div class="col-2 header-table">
                 <p>Checkin Data Table</p>
+              </div>
+              <div class="col-2 header-btn">
+                <a class="btn btn-add-a" href="./formcheckin.php" role="button">CHECKIN</a>
+              </div>
+              <div class="col-2 header-btn">
+                <a class="btn btn-add-a" href="./formcheckout.php" role="button">CHECKOUT</a>
               </div>
           </div> 
             <table class="table table-hover">
@@ -220,11 +228,11 @@
                     <?php 
                         include_once('connection.php');
                         $fetchcheckin = new DB_con();
-                        $fetchcheckout = new DB_con();
-                        $sql_checkin = $fetchcheckin ->fetchcheckindata();
-                        $sql_checkout = $fetchcheckout ->fetchcheckoutdata();
-                       
-                        while($row=mysqli_fetch_array($sql_checkin)){?>
+                        
+                        
+                        $sql = $fetchcheckin ->fetchcheckindata();
+                                              
+                        while($row=mysqli_fetch_array($sql)){?>
                 <tr>
                             <td><?php echo $row["date"] ?></td>
                             <td><?php echo $row["emp_id"] ?></td>
@@ -236,8 +244,10 @@
                             <td><?php echo $row["remark"] ?></td>
                   
                 </tr>
-                <?php } ?>
-
+                <?php } ?> 
+                
+                
+                
               </tbody>
             </table>
           </div>

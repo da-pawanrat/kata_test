@@ -161,21 +161,22 @@
             return $result;
         }
 
-        public function insertcheckout($no,$date,$id,$fname,$lname,$timeto,$timeoff,$leaveday,$remark){
-            $result = mysqli_query($this->dbcon, "INSERT INTO `checkout_leave_work`(`numid`, `date`, `emp_id`, `emp_fname`, `emp_lname`, `time_off_work`, `leave_workingday`, `remark`) 
-            VALUES ('$no','$date','$id','$fname','$lname','$timeoff','$leaveday','$remark')" );
+        public function fetchcheckindata(){
+            $result = mysqli_query($this->dbcon, "SELECT checkin_leave_work.date, checkin_leave_work.emp_id, checkin_leave_work.emp_fname, checkin_leave_work.emp_lname,checkin_leave_work.time_to_work,checkin_leave_work.leave_workingday,checkin_leave_work.remark,checkout_leave_work.time_off_work
+            FROM checkin_leave_work
+            INNER JOIN checkout_leave_work ON checkin_leave_work.emp_id=checkout_leave_work.emp_id");
+            return $result; 
+        }
+
+        public function insertcheckout($no,$date,$id,$fname,$lname,$timeoff){
+            $result = mysqli_query($this->dbcon, "INSERT INTO `checkout_leave_work`(`numid`, `date`, `emp_id`, `emp_fname`, `emp_lname`, `time_off_work`) 
+            VALUES ('$no','$date','$id','$fname','$lname','$timeoff')" );
             return $result;
         }
 
-        public function fetchcheckindata(){
-            $result = mysqli_query($this->dbcon, "SELECT * FROM `checkin_leave_work`");
-            return $result; 
-        }
-
-        public function fetchcheckoutdata(){
-            $result = mysqli_query($this->dbcon, "SELECT * FROM `checkout_leave_work`");
-            return $result; 
-        }
+        
     }
 
-?> 
+
+
+?>  
