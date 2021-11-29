@@ -162,9 +162,7 @@
         }
 
         public function fetchcheckindata(){
-            $result = mysqli_query($this->dbcon, "SELECT checkin_leave_work.date, checkin_leave_work.emp_id, checkin_leave_work.emp_fname, checkin_leave_work.emp_lname,checkin_leave_work.time_to_work,checkin_leave_work.leave_workingday,checkin_leave_work.remark,checkout_leave_work.time_off_work
-            FROM checkin_leave_work
-            INNER JOIN checkout_leave_work ON checkin_leave_work.emp_id=checkout_leave_work.emp_id");
+            $result = mysqli_query($this->dbcon, "SELECT checkin_leave_work.date, checkin_leave_work.emp_id, checkin_leave_work.emp_fname, checkin_leave_work.emp_lname,checkin_leave_work.time_to_work,checkin_leave_work.leave_workingday,checkin_leave_work.remark,checkout_leave_work.time_off_work FROM checkin_leave_work LEFT JOIN checkout_leave_work ON checkin_leave_work.emp_id=checkout_leave_work.emp_id");
             return $result; 
         }
 
